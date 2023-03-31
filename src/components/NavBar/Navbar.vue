@@ -1,16 +1,21 @@
 <script>
 export default {
     name: "Navbar",
+
+    props: {
+        click: String,
+        themeColor: String,
+    }
 }
 </script>
 
 <template>
-    <header>
+    <header :id="themeColor">
         <h1>Where in the world?</h1>
 
-        <div id="darkmode">
+        <div id="darkmode" @click="click">
             <img src="../../assets/moon.png" alt="dark mode" />
-            <p>Dark Mode</p>
+            <button id="darkmode-button">{{themeColor === "light" ? "Dark Mode" : "Light Mode"}}</button>
         </div>
     </header>
 </template>
@@ -38,8 +43,20 @@ h1 {
     font-weight: bold;
 }
 
-p {
+#darkmode-button {
     font-weight: 600;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#light {
+    background-color: #f2f2f2;
+}
+
+#dark {
+    background-color: hsl(209, 23%, 22%);
 }
 
 @media (max-width: 375px) {

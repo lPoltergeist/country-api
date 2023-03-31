@@ -6,6 +6,55 @@
     font-family: "Nunito Sans", sans-serif;
 }
 
+body, article, input, select, section, div {
+    transition: 0.1s ease-in-out;
+}
+
 body {
+    min-height: 100vh;
+}
+
+/*Light*/
+#light {
     background-color: #f2f2f2;
 }
+
+#light body, html {
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+#light button {
+    color: black;
+}
+
+#light article{
+    background-color: #f2f2f2;
+}
+
+
+/*dark*/
+#dark {
+    background-color:  hsl(207, 26%, 17%);
+    color: white;
+    
+}
+
+#dark body, html {
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+#dark button{
+    color: white;
+    background-color: hsl(209, 23%, 22%);
+}
+
+#dark article{
+    color: white;
+}
+
+
+
+
+

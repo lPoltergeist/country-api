@@ -12,6 +12,10 @@ export default {
         return {
             countries: countriesData
         }
+    },
+
+    props: {
+        themeColor: String,
     }
 }
 
@@ -20,12 +24,12 @@ export default {
 <template>
     <main>
         <header>
-            <div id="searchContainer">
+            <div :id="themeColor">
                 <img src="../assets/magnifying-glass.png" alt="search" />
-                <input placeholder="Search for a country..." type="search" />
+                <input :id="themeColor" placeholder="Search for a country..." type="search" />
             </div>
 
-            <select>
+            <select :id="this.themeColor">
                 <option value="" disabled selected>Filter by Region</option>
                 <option>Africa</option>
                 <option>America</option>
@@ -59,7 +63,7 @@ header {
     justify-content: space-between;
 }
 
-#searchContainer {
+div{
     background-color: #fff;
     border-radius: 10px;
     padding: 0 1rem;
@@ -84,7 +88,15 @@ select {
     outline: none;
     border-radius: 10px;
     padding: 0 1rem;
-    border-right: 1rem solid transparent
+    border-right: 1rem solid transparent;
+}
+
+#light {
+    background-color: white;
+}
+
+#dark {
+    background-color: hsl(209, 23%, 22%);;
 }
 
 section {

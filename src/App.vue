@@ -11,14 +11,30 @@ export default {
     Navbar,
     Home,
     CountryDetailed,
+  },
+
+  data() {
+    return {
+      theme: "light"
+    }
+  },
+  methods: {
+    changeTheme(){
+      this.theme = this.theme === "dark" ? "light" : "dark";
+      console.log(this.theme)
+    }
   }
 }
 
 </script>
 
 <template>
-  <Navbar />
-  <CountryDetailed/>
+  <body :id="this.theme === 'light' ? 'light' : 'dark' ">
+    <Navbar :themeColor="theme" :click="changeTheme"/>
+ <!--<Home :themeColor="theme"/>-->
+ <CountryDetailed/> 
+ 
+  </body>
 </template>
 
 <style scoped></style>

@@ -34,7 +34,6 @@ export default {
 
 article{
     width: 20rem;
-    background-color: #fff;
     box-shadow: 3px 5px 20px -2px rgba(0,0,0,0.75);
     border-radius: 10px;
     min-height: 20rem;

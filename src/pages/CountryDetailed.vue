@@ -52,7 +52,9 @@ export default {
 <style scoped>
 main {
     width: 100w;
+   
     margin: 5rem;
+
 }
 
 button {
@@ -94,6 +96,7 @@ section {
 
 #detailed {
     margin: 2rem 0;
+    background-color: transparent;
 
 }
 
@@ -114,6 +117,7 @@ span {
 #border {
     display: flex;
     align-items: center;
+    height: 3rem;
     margin-top: 2rem;
     max-width: 25rem;
     overflow: auto;
