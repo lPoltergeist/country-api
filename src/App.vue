@@ -18,6 +18,18 @@ export default {
       theme: "light"
     }
   },
+
+  mounted(){
+    this.theme = localStorage.theme;
+  },
+
+  watch:{
+    theme(NewTheme) {
+      localStorage.theme = NewTheme;
+    }
+  },
+ 
+
   methods: {
     changeTheme(){
       this.theme = this.theme === "dark" ? "light" : "dark";
@@ -31,8 +43,7 @@ export default {
 <template>
   <body :id="this.theme === 'light' ? 'light' : 'dark' ">
     <Navbar :themeColor="theme" :click="changeTheme"/>
- <!--<Home :themeColor="theme"/>-->
- <CountryDetailed/> 
+    <router-view/>
  
   </body>
 </template>

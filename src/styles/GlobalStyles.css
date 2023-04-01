@@ -14,6 +14,10 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*Light*/
 #light {
     background-color: #f2f2f2;
@@ -30,6 +34,10 @@ body {
 
 #light article{
     background-color: #f2f2f2;
+}
+
+#light a {
+    color: black;
 }
 
 
@@ -54,6 +62,9 @@ body {
     color: white;
 }
 
+#dark a {
+    color: white;
+}
 
 
 

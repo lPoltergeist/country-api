@@ -1,22 +1,27 @@
 <script>
+import { RouterLink } from 'vue-router';
 
 export default {
     name: "CardBox",
-
     props: {
-    flag: String,
-    name: String,
-    population: Number,
-    region: String,
-    capital: String,
-    }
+        flag: String,
+        name: String,
+        population: Number,
+        region: String,
+        capital: String,
+        link: String,
+    },
+    components: { RouterLink }
 }
+
+
 
 
 </script>
 
 <template>
     <article>
+        <RouterLink :to="'/'+link">
         <img :src="flag" alt="countries" />
         <div id="cardinformation">
             <h2>{{ name }}</h2>
@@ -27,6 +32,8 @@ export default {
                 <p>Capital: <span>{{ capital }}</span></p>
             </div>
         </div>
+    </RouterLink>
+
     </article>
 </template>
 

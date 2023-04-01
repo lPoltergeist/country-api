@@ -40,8 +40,8 @@ export default {
         </header>
 
         <section>
-            <CardBox v-if="countries.region = 'Asia'" v-for="countrie in countries" :key="countrie.name"
-                :name="countrie.name" :flag="countrie.flags.svg" :population="countrie.population" :region="countrie.region"
+            <CardBox  v-for="countrie in countries" :key="countrie.name" :link="countrie.name"
+                :name="countrie.name" :flag="countrie.flags.svg" :population="countrie.population.toLocaleString(`en-US`)" :region="countrie.region"
                 :capital="countrie.capital" />
         </section>
     </main>
